@@ -1,2 +1,10 @@
 # bcl2fastq
-typescript annotator for bcl2fastq
+- typescript annotator for bcl2fastq
+- generates the sample sheets for fastq demultiplexing.
+- web front for annotating the Illumina bcl2fastq.
+
+![](https://github.com/IBCHgenomic/eVaiutilities/blob/main/logo.png)
+
+ - Acknowledgements: MOSAIC platform, developed as part of the ECBiG-MOSAIC project (POIR.04.02.00-00-D017/20), co-financed by the European Regional Development Fund (ERDF) under the Smart Growth Operational Programme 2014-2020, Measure 4.2 for the development of modern research infrastructure in the science sector. 
+ - Project PI and Informal queries: Prof. Luiza Handschuh: luizahan@ibch.poznan.pl.
+ - Code related queries: Dr. Gaurav Sablok: gsablok@ibch.poznan.pl.
