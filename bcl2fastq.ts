@@ -24,4 +24,4 @@ interface Illumina {
           description: String,
 }
 
-var interface: n
+var interface:
