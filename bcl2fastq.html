@@ -6,8 +6,9 @@
     <title>My test page</title>
   </head>
 
+       <img src="https://github.com/IBCHgenomic/bcl2fastq/blob/main/sample-files/logo.jpg" alt="Instytut Chemii Bioorganicznej PAN">
+
   <body>
-                <img src="https://github.com/IBCHgenomic/bcl2fastq/blob/main/sample-files/logo.jpg" alt=" Instytut Chemii Bioorganicznej PAN" >
             <h1>
                        Instytut Chemii Bioorganicznej PAN BCL2fastq Indexer
             </h1>
@@ -15,47 +16,111 @@
             <p>
                     The present webpage is only for generating the barcode combination for the bcl2fastq. This allows you to generate and edit the index sequences for the sequencing lane. It uses a type script function to generate the edited index barcode online.
             </p>
-          <p>
-                    Edit the indexes for the forward addition
-          </p>
-        <form>
-          <label for="Index1">Sequencing Index 1:</label><br>
-          <input type="text" id="Index1" name="Index1" style="height: 40px"><br>
-          <label for="Index2">Sequencing Index 2:</label><br>
-          <input type="text" id="Index2" name="Index2" style="height: 40px"><br>
-          <br>
-          <div>
-                    <button type ="front"> Analyze Indexes</button>
-          </div>
-          </form>
 
-          <p>
-                    Edit the indexes for the end addition
-          </p>
-        <form>
-          <label for="Index1">Sequencing Index 1:</label><br>
-          <input type="text" id="Index1" name="Index1" style="height: 40px"><br>
-          <label for="Index2">Sequencing Index 2:</label><br>
-          <input type="text" id="Index2" name="Index2" style="height: 40px"><br>
-          <br>
-          <div>
-                    <button type ="end" > Analyze Indexes</button>
-          </div>
-          </form>
+        <! --- Front end additional>
 
-          <p>
-                    Edit the indexes for the reverse complement
-          </p>
         <form>
+                <p>
+                    <b>Edit the indexes for the forward index addition</b>
+          </p>
+
+          <label for="Index1">Sequencing Index 1:</label><br>
+          <input type="text" id="frontIndex1" name="Index1" style="height: 40px"><br>
+          <label for="Index2">Sequencing Index 2:</label><br>
+          <input type="text" id="frontIndex2" name="Index2" style="height: 40px"><br>
+          <label for="Index add front"> BasePair to add to the front of the Index</label><br>
+          <input type="text" id="frontbp" name="frontbpindex" style="height: 10px"><br>
+          <br>
+          <div>
+                    <button type ="front"> Foward Indexes</button>
+          </div>
+          </form>
+           <script>src="bcl2fastqfrontadd.js"</script>
+
+        <! --- Back end additional>
+
+        <form>
+            <p>
+                   <b>Edit the indexes for the backward index addition</b>
+          </p>
+          <label for="Index1">Sequencing Index 1:</label><br>
+          <input type="text" id="EndIndex1" name="Index1" style="height: 40px"><br>
+          <label for="Index2">Sequencing Index 2:</label><br>
+          <input type="text" id="EndIndex2" name="Index2" style="height: 40px"><br>
+          <label for="Index add back"> BasePair to add to the back of the Index</label><br>
+          <input type="text" id="backbp" name="backbpindex" style="height: 10px"><br>
+          <br>
+          <div>
+                    <button type ="end" > Backward Indexes</button>
+          </div>
+          </form>
+           <script>src="bcl2fastqbackadd.js"</script>
+
+       <! --- Back end and reverse>
+
+        <form>
+            <p>
+                    <b>Edit the indexes for the front end and reverse complement</b>
+          </p>
+          <label for="Index1">Sequencing Index 1:</label><br>
+          <input type="text" id="backaddIndex1" name="Index1" style="height: 40px"><br>
+          <label for="Index2">Sequencing Index 2:</label><br>
+          <input type="text" id="backaddIndex2" name="Index2" style="height: 40px"><br>
+          <label for="Index add back"> BasePair to add to the front of the Index</label><br>
+          <input type="text" id="backbp" name="backbpindex" style="height: 10px"><br>
+          <br>
+          <div>
+                    <button type =endreverse > Forwardrev Indexes</button>
+          </div>
+          </form>
+           <script>src="bcl2fastqfrontaddrev.js"</script>
+
+        <! --- Only reverse>
+
+        <form>
+           <p>
+                    <b>Edit the indexes for the back addition and reverse completment </b>
+          </p>
           <label for="Index1">Sequencing Index 1:</label><br>
           <input type="text" id="Index1" name="Index1" style="height: 40px"><br>
           <label for="Index2">Sequencing Index 2:</label><br>
           <input type="text" id="Index2" name="Index2" style="height: 40px"><br>
+          <label for="Index add back"> BasePair to add to the front and the end of the Index</label><br>
+          <input type="text" id="backbp" name="backbpindex" style="height: 10px"><br>
           <br>
           <div>
-                    <button type ="reverse"> Analyze Indexes</button>
+                    <button type ="frontendreverse">Backwardrev Indexes</button>
           </div>
           </form>
-          <script> src = "bcl2fastq.ts" </script>
+           <script>src="bcl2fastqbackrevadd.js"</script>
+
+                  <! --- Front end and reverse>
+
+        <form>
+            <p>
+                    <b>Reverse complement the forward indexes</b>
+          </p>
+          <label for="Index1">Sequencing Index 1:</label><br>
+          <input type="text" id="frontaddrevIndex1" name="Index1" style="height: 40px"><br>
+          <br>
+          <div>
+                    <button type ="frontreverse"> RevIndexes</button>
+          </div>
+          </form>
+           <script>src="justfrontreverse.js"</script>
+
+          <form>
+              <p>
+                      <b>Reverse complement the backward indexes</b>
+            </p>
+            <label for="Index2">Sequencing Index 2:</label><br>
+            <input type="text" id="frontaddrevIndex2" name="Index2" style="height: 40px"><br>
+            <br>
+            <div>
+                      <button type ="backreverse"> RevIndexes</button>
+            </div>
+            </form>
+             <script>src="justbackreverse.js"</script>
+
   </body>
 </html>
