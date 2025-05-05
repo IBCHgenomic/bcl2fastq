@@ -30,12 +30,25 @@
           <label for="Index add front"> BasePair to add to the front of the Index</label><br>
           <input type="text" id="frontbp" name="frontbpindex" style="height: 10px"><br>
           <br>
+          <p id="output1"></p>
+          <p id="output2"></p>
+
           <div>
-                    <button type ="front"> Foward Indexes</button>
+                    <button type ="front" onclick="frontadd()"> Foward Indexes</button>
           </div>
           </form>
-           <script>src="bcl2fastqfrontadd.js"</script>
+          <script>
+          function frontadd() {
+              let addition = document.getElementById("frontbp").value;
+              let index1 = document.getElementById("frontIndex1").value.split(" ").map((x) => x+addition);
+              let index2 = document.getElementById("frontIndex2").value.split(" ").map((x) => x+addition);
+              let output_1 = document.getElementById("output1")
+              let output_2 = document.getElementById("output2")
+              index1.map((x) => output1.innertHTML += <li>x\n</li>)
+              index2.map((x) => output2.innerHTML += <li>x\n</li>)
 
+          }
+         </script>
         <! --- Back end additional>
 
         <form>
@@ -49,12 +62,25 @@
           <label for="Index add back"> BasePair to add to the back of the Index</label><br>
           <input type="text" id="backbp" name="backbpindex" style="height: 10px"><br>
           <br>
+          <p id="output1"></p>
+          <p id="output2"></p>
+
           <div>
-                    <button type ="end" > Backward Indexes</button>
+                    <button type ="front" onclick="backadd()"> Foward Indexes</button>
           </div>
           </form>
-           <script>src="bcl2fastqbackadd.js"</script>
+          <script>
+          function backadd() {
+              let addition = document.getElementById("frontbp").value;
+              let index1 = document.getElementById("frontIndex1").value.split(" ").map((x) => addition+x);
+              let index2 = document.getElementById("frontIndex2").value.split(" ").map((x) => addition+x);
+              let output_1 = document.getElementById("output1")
+              let output_2 = document.getElementById("output2")
+              index1.map((x) => output1.innertHTML += <li>x\n</li>)
+              index2.map((x) => output2.innerHTML += <li>x\n</li>)
 
+          }
+         </script>
        <! --- Back end and reverse>
 
         <form>
@@ -68,11 +94,25 @@
           <label for="Index add back"> BasePair to add to the front of the Index</label><br>
           <input type="text" id="backbp" name="backbpindex" style="height: 10px"><br>
           <br>
+          <p id="output1"></p>
+          <p id="output2"></p>
+
           <div>
-                    <button type =endreverse > Forwardrev Indexes</button>
+                    <button type ="front" onclick="frontendaddreverse()"> Foward Indexes</button>
           </div>
           </form>
-           <script>src="bcl2fastqfrontaddrev.js"</script>
+          <script>
+          function frontendaddreverse() {
+              let addition = document.getElementById("frontbp").value;
+              let index1 = document.getElementById("frontIndex1").value.split(" ").map((x) => x+addition).map((x) => x.reverse());
+              let index2 = document.getElementById("frontIndex2").value.split(" ").map((x) => x+addition).map((x) => x.reverse());
+              let output_1 = document.getElementById("output1")
+              let output_2 = document.getElementById("output2")
+              index1.map((x) => output1.innertHTML += <li>x\n</li>)
+              index2.map((x) => output2.innerHTML += <li>x\n</li>)
+
+          }
+         </script>
 
         <! --- Only reverse>
 
@@ -87,13 +127,27 @@
           <label for="Index add back"> BasePair to add to the front and the end of the Index</label><br>
           <input type="text" id="backbp" name="backbpindex" style="height: 10px"><br>
           <br>
+          <p id="output1"></p>
+          <p id="output2"></p>
+
           <div>
-                    <button type ="frontendreverse">Backwardrev Indexes</button>
+                    <button type ="front" onclick="backendaddreverse()"> Foward Indexes</button>
           </div>
           </form>
-           <script>src="bcl2fastqbackrevadd.js"</script>
+          <script>
+          function backendaddreverse() {
+              let addition = document.getElementById("frontbp").value;
+              let index1 = document.getElementById("frontIndex1").value.split(" ").map((x) => addition+x).map((x) => x.reverse());
+              let index2 = document.getElementById("frontIndex2").value.split(" ").map((x) => addition+x).map((x) => x.reverse());
+              let output_1 = document.getElementById("output1")
+              let output_2 = document.getElementById("output2")
+              index1.map((x) => output1.innertHTML += <li>x\n</li>)
+              index2.map((x) => output2.innerHTML += <li>x\n</li>)
 
-                  <! --- Front end and reverse>
+          }
+         </script>
+
+                  ! --- Front end and reverse>
 
         <form>
             <p>
@@ -102,11 +156,19 @@
           <label for="Index1">Sequencing Index 1:</label><br>
           <input type="text" id="frontaddrevIndex1" name="Index1" style="height: 40px"><br>
           <br>
+          <p id="output1"></p>
           <div>
-                    <button type ="frontreverse"> RevIndexes</button>
+                    <button type ="front" onclick="frontendaddreverse()"> Foward Indexes</button>
           </div>
           </form>
-           <script>src="justfrontreverse.js"</script>
+          <script>
+          function frontendandaddreverse() {
+              let addition = document.getElementById("frontbp").value;
+              let index1 = document.getElementById("frontIndex1").value.split(" ").map((x) => x+addition).map((x) => x.reverse());
+              let output_1 = document.getElementById("output1")
+              index1.map((x) => output1.innertHTML += <li>x\n</li>)
+          }
+         </script>
 
           <form>
               <p>
@@ -114,12 +176,19 @@
             </p>
             <label for="Index2">Sequencing Index 2:</label><br>
             <input type="text" id="frontaddrevIndex2" name="Index2" style="height: 40px"><br>
-            <br>
+            <p id="output2"></p>
             <div>
-                      <button type ="backreverse"> RevIndexes</button>
+                      <button type ="front" onclick="backendaddreverse()"> Reverse Indexes</button>
             </div>
             </form>
-             <script>src="justbackreverse.js"</script>
+            <script>
+            function backendandaddreverse() {
+                let addition = document.getElementById("frontbp").value;
+                let index1 = document.getElementById("frontIndex2").value.split(" ").map((x) => x+addition).map((x) => x.reverse());
+                let output_1 = document.getElementById("output2")
+                index1.map((x) => output1.innertHTML += <li>x\n</li>)
+            }
+            </form>
 
   </body>
 </html>

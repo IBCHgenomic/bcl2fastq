@@ -10,6 +10,19 @@
  typescript illumina interface
 */
 
+
+function greet() {
+          console.log("Hello, World!");
+}
+
+function frontadd(): void {
+          let index1 = document.getElementById("frontIndex1") as HTMLInputElement;
+          //let index2 = document.getElementById("frontIndex2") as HTMLInputElement;
+          // let addition = document.getElementById("frontbp") as HTMLInputElement;
+          alert(console.log(`${index1}`))
+}
+}
+/*
 function frontadd(): void {
           let index1 = document.getElementById("frontIndex1") as HTMLInputElement;
           let index2 = document.getElementById("frontIndex2") as HTMLInputElement;
@@ -25,3 +38,4 @@ function frontadd(): void {
                     console.log(`${addition}${index2inference[i]}`)
           }
 }
+*/

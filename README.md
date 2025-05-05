@@ -2,6 +2,7 @@
 
 - typescript annotator for bcl2fastq
 - generates the sample sheets for fastq demultiplexing as specified by the user.
+- put the javascript with in the HTML and compiling the typescript with nodejs.
 
 ```
  git clone https://github.com/IBCHgenomic/bcl2fastq.git
