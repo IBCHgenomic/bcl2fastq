@@ -1,8 +1,6 @@
 # bcl2fastq
 
-- typescript annotator for bcl2fastq
-- generates the sample sheets for fastq demultiplexing as specified by the user.
-- put the javascript with in the HTML and compiling the typescript with nodejs.
+- javascript with HTML front end for the indexing barcodes for the de-multiplexing of the illumina reads.
 
 ```
  git clone https://github.com/IBCHgenomic/bcl2fastq.git
