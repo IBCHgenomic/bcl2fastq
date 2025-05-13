@@ -7,10 +7,12 @@
 */
 
 function justbackreverse(): void {
-          let index2 = document.getElementById("frontaddrevIndex2") as HTMLInputElement;
-          let index2inference: Array<string> = index2.value.split("\n");
-          console.log("The second indexes are: ")
-          for (let i = 0; i < index2inference.length; i++) {
-                    console.log(`${index2inference[i]}.reverse()`)
-          }
+	const index2 = document.getElementById(
+		"frontaddrevIndex2",
+	) as HTMLInputElement;
+	const index2inference: Array<string> = index2.value.split("\n");
+	console.log("The second indexes are: ");
+	for (let i = 0; i < index2inference.length; i++) {
+		console.log(`${index2inference[i]}.reverse()`);
+	}
 }
